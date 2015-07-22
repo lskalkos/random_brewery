@@ -7,7 +7,9 @@ class Brewery < ActiveRestClient::Base
   get :all, '/search/geo/point?lat=:lat&lng=:lng&key=dd604aa40606566d3f9fcba2c8ff7d8c'
 
   def self.random(latitude, longitude)
-    all(lat: latitude, lng: longitude).data.take(1).first
+    local_breweries = all(lat: latitude, lng: longitude)
+    random_index_number = rand(local_breweries.totalResults)
+    local_breweries.data[random_index_number]
   end
 
   def test_function
