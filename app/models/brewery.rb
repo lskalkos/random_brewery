@@ -10,6 +10,10 @@ class Brewery < ActiveRestClient::Base
     all(lat: latitude, lng: longitude).data.take(1).first
   end
 
+  def test_function
+    "hi I'm greg"
+  end
+
   # def beers
   #   Beer.all(self.id)
   # end
