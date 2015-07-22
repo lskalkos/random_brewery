@@ -17,7 +17,15 @@ class Brewery < ActiveRestClient::Base
   end
 
   def beers
-    Beer.all(self.id)
+    Beer.all(brewery_id: self.brewery.id).data
   end
+
+  def random_beer
+    brewery_beers = beers
+    random_index_number = rand(brewery_beers.count)
+    brewery_beers[random_index_number]
+  end
+
+
 
 end
