@@ -11,7 +11,7 @@ class Brewery < ActiveRestClient::Base
   end
 
   def test_function
-    "hi I'm not greg"
+    "Hi this is now Lia"
   end
 
   # def beers
