@@ -22,7 +22,7 @@ $(document).ready(function(){
       method: method,
       url: url,
       data: data,
-      datatype: "script"
+      dataType: "script"
       }); 
     });
  
