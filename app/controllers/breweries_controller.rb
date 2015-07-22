@@ -1,11 +1,17 @@
 class BreweriesController < ApplicationController
 
   def index
-    @brewery = Brewery.new
   end
 
   def create
     binding.pry
+  end
+
+
+  private
+
+  def brewery_params
+    params.require(:brewery).permit(:latitude, :longitude)
   end
   
 end
