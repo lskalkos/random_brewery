@@ -12,6 +12,10 @@ class Brewery < ActiveRestClient::Base
     local_breweries.data[random_index_number]
   end
 
+  def name
+    self.brewery["name"]
+  end
+
   def test_function
     "Hi this is now Lia"
   end
@@ -34,5 +38,7 @@ class Brewery < ActiveRestClient::Base
       Beer.new
     end
   end
+
+
 
 end
