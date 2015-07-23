@@ -6,6 +6,7 @@ class BreweriesController < ApplicationController
   def create
     
     @brewery = Brewery.random(brewery_params)
+    binding.pry
   
     
     respond_to do |format|

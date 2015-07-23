@@ -16,6 +16,11 @@ class Brewery < ActiveRestClient::Base
     "Hi this is now Lia"
   end
 
+  def name
+    
+    self.brewery["name"]
+  end
+
   def beers
     Beer.all(brewery_id: self.brewery.id).data
   end
