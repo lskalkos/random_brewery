@@ -15,5 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
-.idea
+.idea/
 Gemfile.lock
+.idea/workspace.xml

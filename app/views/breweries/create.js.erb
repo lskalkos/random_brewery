@@ -1,10 +1,6 @@
-<% @chosen_beer = @brewery.random_beer %>
+$("#beer").html("<%= j render partial: 'brewery', locals: {brewery: @brewery, chosen_beer: @chosen_beer} %>")
 
 
-$("h2").text("How about a <%= j @chosen_beer.name || 'beer'%> at <%= j @brewery.brewery.name %>?");
-$('h4').text("<%= j @brewery.website %>");
-$("#style").text("<%= j @chosen_beer.style.name rescue nil%>")
-$("#abv").text("<%= j @chosen_beer.abv %>")
 
 var lat = <%= j @brewery.latitude.to_s %>;
 var lng = <%= j @brewery.longitude.to_s %>;
