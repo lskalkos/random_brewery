@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
   function getLocation() {
@@ -8,12 +9,14 @@ $(document).ready(function(){
       longitude = position.coords.longitude;
       $("#brewery_latitude").val(eval(latitude));
       $("#brewery_longitude").val(eval(longitude));
+      initialize(latitude, longitude);
     });
   }
 
   getLocation();
 
   $("form").submit(function(event){
+
     event.preventDefault();
     var data = $(this).serializeArray();
     var method = $(this).attr("method"); 
@@ -25,6 +28,7 @@ $(document).ready(function(){
       dataType: "script"
       }); 
     });
+
  
 
 });

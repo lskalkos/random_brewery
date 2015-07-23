@@ -4,8 +4,9 @@ class BreweriesController < ApplicationController
   end
 
   def create
-    binding.pry
+    
     @brewery = Brewery.random(brewery_params)
+   
     
     respond_to do |format|
       format.js
