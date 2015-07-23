@@ -135,6 +135,7 @@
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.10.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v5.0.0, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.1.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.9.1.1, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -157,6 +158,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.6.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="patron (v0.4.20, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pry (v0.10.1, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v4.2.3, RVM: ruby-2.2.1) [gem]" level="application" />
@@ -168,6 +170,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.3, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.2.0, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.3.2, RVM: ruby-2.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.10, RVM: ruby-2.2.1) [gem]" level="application" />
