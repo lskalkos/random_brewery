@@ -1,12 +1,13 @@
 <h1> Hello World </h1>
 <h2></h2>
+<h3>Finding your location...</h3>
 
-<%= form_tag("/breweries", method: "post") do %>
+<div id="beer-form" style="display: none;"><%= form_tag("/breweries", method: "post") do %>
   <%= hidden_field_tag "brewery[latitude]"%>
   <%= hidden_field_tag "brewery[longitude]"%>
 
   <%= submit_tag("Give me a beer") %>
-<% end %>
+<% end %></div>
 
 
 <div id="map-canvas" style="height:500px;width:500px;"></div>

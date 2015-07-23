@@ -9,7 +9,9 @@ $(document).ready(function(){
       longitude = position.coords.longitude;
       $("#brewery_latitude").val(eval(latitude));
       $("#brewery_longitude").val(eval(longitude));
-      initialize(latitude, longitude);
+      $("#beer-form").show();
+      $("h3").hide();
+      // initialize(latitude, longitude);
     });
   }
 

@@ -1,8 +1,11 @@
 
 $('h1').text("<%= j @brewery.brewery.name %>");
+$('h2').text("<%= j @brewery.website %>");
 
 var lat = <%= j @brewery.latitude.to_s %>;
 var lng = <%= j @brewery.longitude.to_s %>;
+var start_lat = $("#brewery_latitude").val();
+var start_lng = $("#brewery_longitude").val();
 
 
 
@@ -11,7 +14,7 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 
     
-  function initialize(lat, lng) {
+function initialize(lat, lng) {
   directionsDisplay = new google.maps.DirectionsRenderer();
   var start_location = new google.maps.LatLng(lat, lng);
   var mapOptions = {
@@ -23,7 +26,7 @@ var map;
 }
 
 function calcRoute(lat_end, long_end) {
-  var start = new google.maps.LatLng($("#brewery_latitude").val(), $("#brewery_longitude").val());
+  var start = new google.maps.LatLng(start_lat, start_lng);
   var end = new google.maps.LatLng(lat_end, long_end);
   var request = {
       origin:start,
@@ -37,5 +40,5 @@ function calcRoute(lat_end, long_end) {
   });
 }
 
-initialize($("#brewery_latitude").val(), $("#brewery_longitude").val());
-calcRoute(<%= j @brewery.latitude.to_s %>, <%= j @brewery.longitude.to_s %>);
+initialize(start_lat, start_lng);
+calcRoute(lat, lng);
