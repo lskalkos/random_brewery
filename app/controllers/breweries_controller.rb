@@ -6,7 +6,7 @@ class BreweriesController < ApplicationController
   def create
     
     @brewery = Brewery.random(brewery_params)
-   
+  
     
     respond_to do |format|
       format.js

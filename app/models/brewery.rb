@@ -22,10 +22,12 @@ class Brewery < ActiveRestClient::Base
 
   def random_beer
     brewery_beers = beers
-    random_index_number = rand(brewery_beers.count)
-    brewery_beers[random_index_number]
+    if !brewery_beers.nil?
+      random_index_number = rand(brewery_beers.count)
+      brewery_beers[random_index_number]
+    else
+      Beer.new
+    end
   end
-
-
 
 end

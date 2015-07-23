@@ -1,5 +1,19 @@
-$('h1').text("<%= j @brewery.brewery.name %>");
-$('h2').text("<%= j @brewery.website %>");
+
+
+<% @chosen_beer = @brewery.random_beer %>
+<% @chosen_beer ||= Beer.new %>
+
+
+<% @style = @chosen_beer.style %>
+
+
+$("h2").text("How about a <%= j @chosen_beer.name || 'beer'%> at <%= j @brewery.brewery.name %>?");
+$('h4').text("<%= j @brewery.website %>");
+$("#style").text("<%= j @chosen_beer.style.name rescue nil%>")
+$("#abv").text("<%= j @chosen_beer.abv %>")
+
+
+
 
 var lat = <%= j @brewery.latitude.to_s %>;
 var lng = <%= j @brewery.longitude.to_s %>;
