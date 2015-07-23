@@ -1,43 +1,13 @@
 $("#beer").html("<%= j render partial: 'brewery', locals: {brewery: @brewery, chosen_beer: @chosen_beer} %>")
 
 
-
 var lat = <%= j @brewery.latitude.to_s %>;
 var lng = <%= j @brewery.longitude.to_s %>;
 var start_lat = $("#brewery_latitude").val();
 var start_lng = $("#brewery_longitude").val();
 
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var map;
-   
-initialize(start_lat, start_lng);
-calcRoute(lat, lng);
-
-function initialize(lat, lng) {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  var start_location = new google.maps.LatLng(lat, lng);
-  var mapOptions = {
-    zoom:13,
-    center: start_location
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  directionsDisplay.setMap(map);
-}
-
-function calcRoute(lat_end, long_end) {
-  var start = new google.maps.LatLng(start_lat, start_lng);
-  var end = new google.maps.LatLng(lat_end, long_end);
-  var request = {
-      origin:start,
-      destination:end,
-      travelMode: google.maps.TravelMode.WALKING
-  };
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    }
-  });
-}
+var map = new GoogleMap();
+map.initialize(start_lat, start_lng);
+map.calcRoute(lat, lng);
 
 
