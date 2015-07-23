@@ -8,8 +8,8 @@
     <% end %>
   </h2>
 
-  <p id="style"><%= chosen_beer.style ? chosen_beer.style.name : nil %></p>
-  <p id="abv"><%= chosen_beer.abv %></p>
+  <p id="style"><%= chosen_beer.style ? "Style: #{chosen_beer.style.name}" : nil %></p>
+  <p id="abv"><%= chosen_beer.abv ? "ABV: #{chosen_beer.abv}" : nil %></p>
 
 </div>
 
