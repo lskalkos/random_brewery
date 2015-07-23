@@ -1,17 +1,9 @@
 <h1>Find a local beer!</h1>
-<h2></h2>
-<h4></h4>
+
 <h3>Finding your location<span id="dots"></span></h3>
 
 <div id="beer"></div>
 
-<div id="beer-form" style="display: none;">
-  <%= form_tag("/breweries", method: "post") do %>
-  <%= hidden_field_tag "brewery[latitude]"%>
-  <%= hidden_field_tag "brewery[longitude]"%>
-
-  <%= submit_tag("Give me a beer") %>
-  <% end %>
-</div>
+<%= render 'form' %>
 
 <div id="map-canvas" style="height:500px;width:500px;"></div>
