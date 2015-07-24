@@ -2,14 +2,6 @@
 
 <div id="beer"></div>
 
-<div id="beer-form">
-
-  <%= form_for @brewery do |f| %>
-  <%= f.hidden_field :latitude, value: @latitude %>
-  <%= f.hidden_field :longitude, value: @longitude %>
-  <%= f.submit "Find a beer" %>
-  <% end %>
-</div>
-
+<%= render 'form' %>
 
 <div id="map-canvas" style="height:500px;width:500px;"></div>

@@ -1,7 +1,7 @@
-<div id="beer-form" style="display: none;">
-    <%= form_tag("/breweries", method: "post") do %>
-        <%= hidden_field_tag "brewery[latitude]"%>
-        <%= hidden_field_tag "brewery[longitude]"%>
-        <%= submit_tag("Give me a beer") %>
+<div id="beer-form">
+    <%= form_for @brewery do |f| %>
+        <%= f.hidden_field :latitude, value: @latitude %>
+        <%= f.hidden_field :longitude, value: @longitude %>
+        <%= f.submit "Find a beer" %>
     <% end %>
 </div>
