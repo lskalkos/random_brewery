@@ -3,7 +3,7 @@ class Brewery < ActiveRestClient::Base
 
   base_url "http://api.brewerydb.com/v2/"
 
-  get :all, '/search/geo/point?lat=:latitude&lng=:longitude&key=dd604aa40606566d3f9fcba2c8ff7d8c'
+  get :all, '/search/geo/point?lat=:latitude&lng=:longitude&key=' + ENV["api_key"]
 
   def self.random(location_hash)
     local_breweries = all(location_hash).data
