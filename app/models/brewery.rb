@@ -5,6 +5,8 @@ class Brewery < ActiveRestClient::Base
 
   get :all, '/search/geo/point?lat=:latitude&lng=:longitude&key=' + ENV["api_key"]
 
+
+
   def self.random(location_hash)
     local_breweries = all(location_hash).data
     sample(local_breweries)
