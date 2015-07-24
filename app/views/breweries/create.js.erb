@@ -1,7 +1,5 @@
 $("#beer").html("<%= j render partial: 'brewery', locals: {brewery: @brewery, chosen_beer: @chosen_beer} %>")
 
-
-
 var lat = <%= j @brewery.latitude.to_s %>;
 var lng = <%= j @brewery.longitude.to_s %>;
 var start_lat = $("#brewery_latitude").val();

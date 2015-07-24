@@ -1,4 +1,6 @@
 class Brewery < ActiveRestClient::Base
+  include ActiveModel::Model
+
   base_url "http://api.brewerydb.com/v2/"
 
   get :all, '/search/geo/point?lat=:latitude&lng=:longitude&key=dd604aa40606566d3f9fcba2c8ff7d8c'
@@ -23,8 +25,5 @@ class Brewery < ActiveRestClient::Base
   def self.sample(breweries)
     breweries[rand(breweries.count)]
   end
-
-
-
 
 end
