@@ -8,6 +8,8 @@ var start_lng = <%= j params[:brewery][:longitude] %>;
 
 var map = new GoogleMap();
 map.initialize(start_lat, start_lng);
+map.addMaptoPage();
 map.calcRoute(lat, lng);
+
 
 
