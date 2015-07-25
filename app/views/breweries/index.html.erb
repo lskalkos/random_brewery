@@ -6,9 +6,9 @@
   <%= form_for @brewery, remote: true do |f| %>
   <%= f.hidden_field :latitude, value: @latitude %>
   <%= f.hidden_field :longitude, value: @longitude %>
-  <%= f.submit "Find a beer" %>
+  <%= f.submit "Pour Me a Tall One", class: "btn btn-primary btn-lg", id: "submit" %>
   <% end %>
 </div>
 
 
-<div id="map-canvas" style="height:500px;width:500px;"></div>
+<div id="map-canvas" style="height:300px;width:960px;"></div>

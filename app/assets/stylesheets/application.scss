@@ -10,6 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import "bootstrap-sprockets";
+
+@import "bootswatch/superhero/variables";
+
+@import "bootstrap";
+
+body { padding-top: 60px; }
+
+@import "bootswatch/superhero/bootswatch";
+
+/* Whatever application styles you have go last
+* @import "base"; */
+
+@import "breweries";
