@@ -1,6 +1,7 @@
 <div class="brewery">
+
   <h2>
-    How about a <%= chosen_beer.name || 'beer'%> at
+    How about a <span clas="beer"><%= chosen_beer.name || 'beer'%></span> at
     <% if brewery.website %>
       <a href="<%= brewery.website %>"><%= brewery.name %></a>?
     <% else %>

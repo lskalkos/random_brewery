@@ -1,3 +1,29 @@
-// Place all the styles related to the breweries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  font-size: 42px;
+  text-align: center;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h2 span{
+  text-decoration: underline;
+}
+
+
+
+#submit{
+  margin: 0 auto;
+  display: block;
+}
+
+#beer{
+  text-align: center;
+}
+
+#map-canvas{
+  margin: 40px auto 0px;
+  height: 300px;
+  width: 960px;
+}

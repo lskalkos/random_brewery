@@ -6,8 +6,13 @@ var lng = <%= j @brewery.longitude.to_s %>;
 var start_lat = <%= j params[:brewery][:latitude] %>;
 var start_lng = <%= j params[:brewery][:longitude] %>;
 
+$('#submit').val("Pour Me Another One");
+$('h1').hide();
+
 var map = new GoogleMap();
 map.initialize(start_lat, start_lng);
+map.addMaptoPage();
 map.calcRoute(lat, lng);
+
 
 
